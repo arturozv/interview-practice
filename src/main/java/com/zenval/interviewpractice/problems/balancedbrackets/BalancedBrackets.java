@@ -28,7 +28,7 @@ public class BalancedBrackets {
         for (int i = 0; i < input.length(); i++) {
             Character character = input.charAt(i);
 
-            if (isClosener(character)) {
+            if (isCloser(character)) {
                 if (!stack.isEmpty() && characterMap.get(character).equals(stack.peek())) {
                     stack.pop();
                 } else {
@@ -42,7 +42,7 @@ public class BalancedBrackets {
         return stack.isEmpty();
     }
 
-    boolean isClosener(Character character) {
+    boolean isCloser(Character character) {
         return characterMap.containsKey(character);
     }
 
