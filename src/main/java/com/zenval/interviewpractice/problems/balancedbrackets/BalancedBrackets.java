@@ -25,9 +25,7 @@ public class BalancedBrackets {
 
         Stack<Character> stack = new Stack<>();
 
-        for (int i = 0; i < input.length(); i++) {
-            Character character = input.charAt(i);
-
+        for (Character character: input.toCharArray()) {
             if (isCloser(character)) {
                 if (!stack.isEmpty() && characterMap.get(character).equals(stack.peek())) {
                     stack.pop();
