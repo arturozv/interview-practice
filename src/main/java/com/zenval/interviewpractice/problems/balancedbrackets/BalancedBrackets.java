@@ -19,6 +19,10 @@ public class BalancedBrackets {
     }
 
     public boolean isBalanced(final String input) {
+        if (input == null || input.isEmpty()) {
+            return false;
+        }
+
         Stack<Character> stack = new Stack<>();
 
         for (int i = 0; i < input.length(); i++) {

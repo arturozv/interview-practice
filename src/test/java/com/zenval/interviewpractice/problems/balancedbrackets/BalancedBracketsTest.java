@@ -18,6 +18,9 @@ public class BalancedBracketsTest {
 
         input = "[[[[[[[[[]]]]]]]]]";
         assertThat(instance.isBalanced(input)).isTrue();
+
+        input = "a";
+        assertThat(instance.isBalanced(input)).isTrue();
     }
 
 
@@ -39,6 +42,21 @@ public class BalancedBracketsTest {
         assertThat(instance.isBalanced(input)).isFalse();
 
         input = "{{ab(c<def>g)h]i}";
+        assertThat(instance.isBalanced(input)).isFalse();
+
+        input = "{";
+        assertThat(instance.isBalanced(input)).isFalse();
+
+        input = "}";
+        assertThat(instance.isBalanced(input)).isFalse();
+    }
+
+    @Test
+    public void when_is_invalid_input() {
+        String input = "";
+        assertThat(instance.isBalanced(input)).isFalse();
+
+        input = null;
         assertThat(instance.isBalanced(input)).isFalse();
     }
 }
