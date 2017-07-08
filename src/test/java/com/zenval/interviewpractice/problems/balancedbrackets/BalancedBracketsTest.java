@@ -21,6 +21,9 @@ public class BalancedBracketsTest {
 
         input = "a";
         assertThat(instance.isBalanced(input)).isTrue();
+
+        input = "[[[[[[[[[]]]]]]]]][[[[[[[[[]]]]]]]]][[[[[[[[[]]]]]]]]][[[[[[[[[]]]]]]]]][[[[[[[[[]]]]]]]]][[[[[[[[[]]]]]]]]]";
+        assertThat(instance.isBalanced(input)).isTrue();
     }
 
 
